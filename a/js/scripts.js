@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', event => {
 function submit() {
     let params = {
         name: document.querySelector("#form-name").value,
-        name: document.querySelector("#form-email").value,
+        email: document.querySelector("#form-email").value,
         message: document.querySelector("#form-message").value
     };
 
