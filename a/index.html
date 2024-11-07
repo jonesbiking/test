@@ -171,7 +171,13 @@
                 <textarea type="message" rows="3" class="form-control" id="form-message"></textarea>
             </div>
             <div class="form-group">
-                <a class="btn btn-primary" onclick="submit()">submit</a>
+                <button class="btn btn-primary" type="button" id="form-submit-btn" onclick="submit()">
+                    Submit
+                </button>
+                <button class="btn btn-primary" type="button" disabled id="form-submit-btn-loading" hidden>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Submit
+                </button>
             </div>
         </div>
     </section>
