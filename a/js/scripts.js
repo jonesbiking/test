@@ -59,10 +59,17 @@ function submit() {
         email: document.querySelector("#form-email").value,
         message: document.querySelector("#form-message").value
     };
-    
+
+    document.querySelector("#form-submit-btn").hidden = true;
+    document.querySelector("#form-submit-btn-loading").hidden = false;
+
     emailjs.send("service_t9ifro2", "template_6pvypng", params).then(res => {
+        document.querySelector("#form-submit-btn").hidden = false;
+        document.querySelector("#form-submit-btn-loading").hidden = true;
         alert("Your from submitted succesfully!");
     }).catch(error => {
+        document.querySelector("#form-submit-btn").hidden = false;
+        document.querySelector("#form-submit-btn-loading").hidden = true;
         alert("An error occured");
     });
 }
