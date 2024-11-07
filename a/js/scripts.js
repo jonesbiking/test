@@ -59,8 +59,10 @@ function submit() {
         email: document.querySelector("#form-email").value,
         message: document.querySelector("#form-message").value
     };
-
+    
     emailjs.send("service_t9ifro2", "template_6pvypng", params).then(res => {
-
+        alert("Your from submitted succesfully!");
+    }).catch(error => {
+        alert("An error occured");
     });
 }
